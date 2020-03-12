@@ -16,9 +16,19 @@ firstly,
 in app.py, change host and port.
     app.run_server(debug=True, host='0.0.0.0', port='80')
 
-secondly,
+secondly, build docker
 
+docker build -t dash-trade-space .
+docker run -it --rm -p 7625:80 dash-trade-space
 
-$ docker build -t dash-azure .
-$ docker run -it --rm -p 7625:80 dash-azure
+check http://localhost:7625/
 
+next, push docker image to azure hub. 
+
+$ az login
+$ docker login <azure repository container url>]
+$ docker build- t dash-trade-space .
+$ docker tag dash-trade-space <azure repository container url>/dash-trade-space:latest
+$ docker push <azure repository container url>/dash-trade-space:latest
+
+if you can't use az comamnd, "brew update && brew install azure-cli"

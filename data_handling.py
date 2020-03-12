@@ -14,7 +14,7 @@ def data_download():
     file_service = FileService(account_name=account_name, account_key=key)
 
     # ファイルのダウンロード(カレントにそのままダウンロード)
-    share_name = 'uploadfile'
+    share_name = 'data'
     dir_name = None
     file_name = 'TradeSpace.csv'
     download_path = 'TradeSpace.csv'
@@ -22,7 +22,7 @@ def data_download():
 
 def TradeSpace():
 
-#    data_download()
+    data_download()
     df = pd.read_csv("TradeSpace.csv")
 
     return df    
