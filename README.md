@@ -27,8 +27,10 @@ next, push docker image to azure hub.
 
 $ az login
 $ docker login <azure repository container url>]
-$ docker build- t dash-trade-space .
+$ docker build -t dash-trade-space .
 $ docker tag dash-trade-space <azure repository container url>/dash-trade-space:latest
 $ docker push <azure repository container url>/dash-trade-space:latest
 
 if you can't use az comamnd, "brew update && brew install azure-cli"
+
+Finally, On portal.azure, deploy WebApp using registerd container.
