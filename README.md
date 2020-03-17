@@ -36,6 +36,6 @@ docker tag dash-trade-space <azure repository container url>/dash-trade-space:la
 docker push <azure repository container url>/dash-trade-space:latest
 ```
 
-if you can't use az comamnd, "brew update && brew install azure-cli"
+if you can't use az comamnd,```brew update && brew install azure-cli```
 
 Finally, On portal.azure, deploy WebApp using registerd container.
