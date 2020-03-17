@@ -15,7 +15,10 @@ pip install -r requirements.txt
 firstly,
 
 in app.py, change host and port.
-    app.run_server(debug=True, host='0.0.0.0', port='80')
+
+```py
+app.run_server(debug=True, host='0.0.0.0', port='80')
+```
 
 secondly, build docker
 
